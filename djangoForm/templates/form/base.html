@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        
+        {% block title %}
+            Django Form
+        {% endblock title %}
+            
+    </title>
+    
+    {% block head %}
+        <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap5.min.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap5-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'chartJS/Chart.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTables/datatables.min.css' %}">
+    {% endblock head %}
+        
+</head>
+<body>
+    <div class="container">
+        {% block body %}
+        {% endblock body %}
+    </div>      
+    
+    {% block script %}
+        <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'bootstrap5/bootstrap5.bundle.min.js' %}"></script>
+        <script src="{% static 'chartJS/Chart.bundle.js' %}"></script>
+        <script src="{% static 'dataTables/datatables.min.js' %}"></script>
+        <script src="{% static 'dataTables/script.js' %}"></script>
+    {% endblock script %}
+        
+</body>
+</html>
